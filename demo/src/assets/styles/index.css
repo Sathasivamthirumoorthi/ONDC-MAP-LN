@@ -11,11 +11,11 @@
   body,
   #app,
   main {
-    @apply h-full bg-slate-800 text-slate-200 font-sans;
+    @apply h-full text-slate-200 font-sans;
   }
 
   main > * {
-    @apply w-full bg-slate-700 rounded-3xl;
+    @apply w-full bg-black rounded-3xl;
   }
 
   a {

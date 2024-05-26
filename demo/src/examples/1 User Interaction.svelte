@@ -7,9 +7,12 @@
   import "maplibre-gl/dist/maplibre-gl.css";
   import style from "../assets/map/style/style.json?url";
   import MapLibreGlDirections from "@maplibre/maplibre-gl-directions";
+  import {Map, MapStyle, config} from '@maptiler/sdk';
+  import "@maptiler/sdk/dist/maptiler-sdk.css";
+
 
   const meta = examples.find((example) => example.path === $location)!;
-
+  config.apiKey = 'YOUR_MAPTILER_API_KEY_HERE';
   let mapRef: HTMLElement;
   let map: maplibregl.Map;
   let directions: MapLibreGlDirections;
@@ -28,7 +31,7 @@
       refreshOnMove: !refreshOnMove,
     });
   }
-
+  
   onMount(() => {
     map = new maplibregl.Map({
       container: mapRef,
