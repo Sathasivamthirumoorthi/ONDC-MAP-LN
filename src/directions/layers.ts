@@ -13,7 +13,7 @@ export const colors = {
   snappoint: "#cb3373",
   snappointHighlight: "#e50d3f",
   waypointFoot: "#3665ff",
-  waypointFootHighlight: "#0942ff",
+  waypointFootHighlight: "#66FF00",
   waypointBike: "#63c4ff",
   waypointBikeHighlight: "#0bb8ff",
   waypoint: "#7b51f8",

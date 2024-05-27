@@ -59,17 +59,17 @@
     foot: colors.routelineFoot,
   };
 
-  const initialProfiles: (keyof typeof profileColors)[] = ["car", "bike", "car", "car", "foot"];
+  const initialProfiles: (keyof typeof profileColors)[] = ["foot"];
 
   let profiles = initialProfiles;
 
-  $: displayedProfiles = profiles.reduce<typeof profiles>((res, profile) => {
-    if (res[res.length - 1] !== profile) {
-      res.push(profile);
-    }
+  // $: displayedProfiles = profiles.reduce<typeof profiles>((res, profile) => {
+  //   if (res[res.length - 1] !== profile) {
+  //     res.push(profile);
+  //   }
 
-    return res;
-  }, []);
+  //   return res;
+  // }, []);
 
   function setPredefinedWaypoints() {
     profiles = initialProfiles;
@@ -100,11 +100,11 @@
   <small><strong>Note</strong> that interactivity is not supported for multiple profiles</small>
 
   <p>Used profiles:</p>
-  <ul>
+  <!-- <ul>
     {#each displayedProfiles as profile}
       <li style="--marker-color: {profileColors[profile]}" class="color-marker">{@html profile}</li>
     {/each}
-  </ul>
+  </ul> -->
 
   <div class="flex gap-2 justify-center">
     <button disabled={!directions} on:click={shuffleWaypoints}>Shuffle Profiles</button>
