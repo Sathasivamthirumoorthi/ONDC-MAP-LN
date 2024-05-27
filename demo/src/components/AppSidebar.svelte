@@ -12,7 +12,7 @@
     {#if !noHeader}
       <header class="p-5 lg:p-10 pb-2.5 lg:pb-5 flex justify-between gap-2.5 lg:gap-5 sticky top-0 bg-inherit">
         <a href="/" use:link>Back to Menu</a>
-        </header>
+      </header>
     {/if}
 
     <article class="p-5 lg:p-10 flex flex-col gap-1.5 lg:gap-3" class:!pt-0={!noHeader}>

@@ -4,7 +4,7 @@ import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte({ configFile: "../svelte.config.cjs" })],
+  plugins: [svelte({ configFile: "../svelte.config.js" })],
 
   root: "demo",
 

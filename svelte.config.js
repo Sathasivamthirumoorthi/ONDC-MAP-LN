@@ -1,6 +1,7 @@
-const sveltePreprocess = require("svelte-preprocess");
+import adapter from '@sveltejs/adapter-node';
+import sveltePreprocess from "svelte-preprocess";
 
-module.exports = {
+export default{
   // consult https://github.com/sveltejs/svelte-preprocess for more information about preprocessors
   preprocess: [
     sveltePreprocess({
@@ -8,4 +9,8 @@ module.exports = {
       postcss: true,
     }),
   ],
+  kit: {
+    adapter: adapter()
+  }
+  
 };

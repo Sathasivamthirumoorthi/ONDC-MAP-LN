@@ -17,10 +17,10 @@ Solution Expected & Deliverables :
 
 Showcase a solution that uses open source maps to enable functionality defined above; existing open source maps such as OpenStreetMap, Mapbox, etc. may be used.
 All artefact used should be elaborated.
-All assumptions should be elaborated. 
+All assumptions should be elaborated.
 
 steps to run:
 
-npm i 
+npm i
 
 npm run dev:demo
