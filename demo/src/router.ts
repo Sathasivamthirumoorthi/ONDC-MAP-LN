@@ -12,7 +12,6 @@ export const examples = Object.entries(import.meta.glob("./examples/**.svelte", 
       index,
       name: name,
       component: component,
-      sourceUrl: `https://github.com/maplibre/maplibre-gl-directions/tree/main/demo/src/${path}`,
     };
   },
 );

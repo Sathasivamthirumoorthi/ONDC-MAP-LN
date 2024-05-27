@@ -5,7 +5,7 @@
 </script>
 
 <AppSidebar noHeader>
-  <span slot="title">Examples</span>
+  <span slot="title">Features</span>
 
   <ul>
     {#each examples.sort((a, b) => a.index - b.index) as example}
