@@ -1,96 +1,26 @@
-# MapLibre GL Directions
+THEME:
 
-A plugin to show routing directions on a MapLibre GL JS map. Supports any [OSRM](http://project-osrm.org/) or [Mapbox Directions API](https://docs.mapbox.com/api/navigation/directions/) compatible Routing-provider.
+Logistics
 
-![1st Demo Screenshot](https://raw.githubusercontent.com/maplibre/maplibre-gl-directions/main/doc/images/demo-screenshot-1.png)
-![2nd Demo Screenshot](https://raw.githubusercontent.com/maplibre/maplibre-gl-directions/main/doc/images/demo-screenshot-2.png)
-![3rd Demo Screenshot](https://raw.githubusercontent.com/maplibre/maplibre-gl-directions/main/doc/images/demo-screenshot-3.png)
+PROBLEM NAME:
 
-[Live Demo](https://maplibre.org/maplibre-gl-directions/#/).
+Using open source maps
 
----
+DESCRIPTION OF THE PROBLEM STATEMENT:
 
-## Features
+ONDC aims to democratise the e-commerce space and hence would contain amalgamation of a variety of Buyer Apps and Seller Apps.
 
-### Different Routing-providers
+For the network to reach that scale, it becomes imperative to use open source components to reduce the cost and make it affordable for even the smallest of the Buyer Apps and Seller apps.
+The objective is to allow buyer and seller apps to use Open source maps for e-commerce functionality such as creating polygon(s) of points, generating motorable paths between 2 points, reverse-geocoding address to point on map, computing motorable distance between 2 points, mapping point to polygon / path interactively / using API, etc.
+Point should support multiple representations such as gps coordinates, Google s2 cells, Uber h3 cells, etc.
+Solution Expected & Deliverables :
 
-The plugin supports any OSRM- or Mapbox Directions API-compatible Routing-provider out of the box!
+Showcase a solution that uses open source maps to enable functionality defined above; existing open source maps such as OpenStreetMap, Mapbox, etc. may be used.
+All artefact used should be elaborated.
+All assumptions should be elaborated. 
 
-### Sane Defaults
+steps to run:
 
-Works without any configuration at all out of the box, though at the same time configurable enough to support most of the imaginable scenarios.
+npm i 
 
-### User interaction
-
-Add waypoints by clicking the map, click a waypoint to remove it, drag waypoints to move them, add waypoints in-between existing ones by dragging the selected route line, change the selected route by clicking an alternative route line or completely disable the user interaction with a single call. Everything is touch-friendly!
-
-### Congestions
-
-Supports the Mapbox Directions API congestions (both plain and numeric!)
-
-### Bearings
-
-Supports the waypoints' bearings settings with the help of a custom Control.
-
-### Multiple routing profiles per single directions request
-
-Originally, backends (e.g. OSRM and Mapbox Directions API) don't support multiple routing profiles per single routing request. But the plugin overcomes the limitation, and it becomes possible to retrieve directions for a walk to a bus stop, then riding on a bus and then again walking from the next bus stop to the final destination all in one request!
-
-### Customization
-
-The powerful customization interface allows to customize everything starting from visual aspects all the way up to request logic.
-
-### Standard Controls
-
-Provides standard map-controls. Currently, there're only 2 of them (loading-indicator and bearings), but there are more to come.
-
-### TypeScript support
-
-The plugin is written 100% in TypeScript and therefore ships with built-in types.
-
-## Installation
-
-```shell
-npm i @maplibre/maplibre-gl-directions
-```
-
-## Usage
-
-```typescript
-// Import the plugin
-import MapLibreGlDirections, { LoadingIndicatorControl } from "@maplibre/maplibre-gl-directions";
-
-// Make sure to create a MapLibreGlDirections instance only after the map is loaded
-map.on("load", () => {
-  // Create an instance of the default class
-  const directions = new MapLibreGlDirections(map);
-
-  // Enable interactivity (if needed)
-  directions.interactive = true;
-
-  // Optionally add the standard loading-indicator control
-  map.addControl(new LoadingIndicatorControl(directions));
-
-  // Set the waypoints programmatically
-  directions.setWaypoints([
-    [-73.8271025, 40.8032906],
-    [-73.8671258, 40.82234996],
-  ]);
-
-  // Remove waypoints
-  directions.removeWaypoint(0);
-
-  // Add waypoints
-  directions.addWaypoint([-73.8671258, 40.82234996], 0);
-
-  // Remove everything plugin-related from the map
-  directions.clear();
-});
-```
-
-Check out the [Demo](https://maplibre.org/maplibre-gl-directions/#/) or dive right into the [API Docs](https://maplibre.org/maplibre-gl-directions/api) for more!
-
-## Future plans
-
-- Implement default control
-- Write tests
+npm run dev:demo
