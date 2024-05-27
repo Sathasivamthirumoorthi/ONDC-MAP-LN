@@ -15,13 +15,29 @@ module.exports = {
   overrides: [
     {
       files: ["*.svelte"],
+      // files: ["./demo/**/*.{ts,js,cjs,svelte}", "./src/**/*.{ts,js,cjs,svelte}"],
       parser: "svelte-eslint-parser",
       // Parse the `<script>` in `.svelte` as TypeScript by adding the following configuration.
       parserOptions: {
         parser: "@typescript-eslint/parser",
       },
+      rules: {
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "svelte/valid-compile": "off",
+      },
     },
   ],
+  // overrides: [
+  //   {
+  //     files: ["*.svelte"],
+  //     parser: "svelte-eslint-parser",
+  //     // Parse the `<script>` in `.svelte` as TypeScript by adding the following configuration.
+  //     parserOptions: {
+  //       parser: "@typescript-eslint/parser",
+  //     },
+  //   },
+  // ],
   plugins: ["@typescript-eslint"],
   rules: {
     "svelte/no-at-html-tags": "off",
