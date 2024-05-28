@@ -20,14 +20,8 @@
   <div
     class="p-5 lg:p-10 h-full flex flex-col gap-5 lg:gap-10 justify-start lg:justify-center items-center flex-col bg-inherit overflow-x-hidden overflow-y-auto"
   >
-    <h1 class="text-center max-w-3xl">Please, choose an example at the sidebar on the left</h1>
+    <h1 class="text-center max-w-3xl">ONDC MAPS</h1>
 
-    <span class="text-slate-500">or navigate to</span>
-
-    <div class="flex flex-col gap-2.5 lg:gap-5 justify-center items-center">
-      <a href="https://github.com/maplibre/maplibre-gl-directions" target="_blank" rel="noreferrer">GitHub</a>
-      <a href={`${import.meta.env.BASE_URL}/api`} target="_blank" rel="noreferrer">API</a>
-    </div>
   </div>
 </div>
 

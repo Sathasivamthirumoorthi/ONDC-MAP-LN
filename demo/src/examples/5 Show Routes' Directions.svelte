@@ -30,12 +30,11 @@
     bike: colors.routelineBike,
     foot: colors.waypointFootHighlight,
   };
-
   onMount(() => {
     const map = new maplibregl.Map({
       container: mapRef,
       style: style,
-      center: [-74.1197632, 40.6974034],
+      center: [78.47406104207039, 17.36058913600257],
       zoom: 11,
       attributionControl: false,
     });
@@ -194,7 +193,7 @@
 </script>
 
 <AppSidebar>
-  <span slot="title">{meta.name}</span>
+  <h2>{meta.name}</h2>
 
   <div class="form grid grid-cols-1 gap-4">
     <div>
