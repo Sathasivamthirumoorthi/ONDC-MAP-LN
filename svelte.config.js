@@ -1,5 +1,5 @@
-import adapter from '@sveltejs/adapter-netlify';
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-vercel';
+import sveltePreprocess from "svelte-preprocess";
 
 export default{
   // consult https://github.com/sveltejs/svelte-preprocess for more information about preprocessors
